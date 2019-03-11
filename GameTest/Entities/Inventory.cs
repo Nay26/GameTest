@@ -25,19 +25,22 @@ namespace GameTest
                 foreach (int location in GetItemStackLocations(item))
                 {
                     int spaceLeft = 0;
-                    spaceLeft = spaces[location].item.stackSize - spaces[location].amount;
-                    if (spaceLeft > 0)
+                    spaceLeft = item.stackSize - spaces[location].amount;
+                    if ( (spaceLeft > 0) && (amount > 0) )
                     {
                         for (int j = 0; j < spaceLeft; j++)
                         {
-                            spaces[location].amount++;
-                            amount--;
+                            if (amount > 0)
+                            {
+                                spaces[location].amount++;
+                                amount--;
+                            }
                         }
                     }
                 }
             }
 
-            if (IsSpace()) // once youve stacked what you can make empty stacks
+            if (IsSpace() && (amount > 0)) // once youve stacked what you can make empty stacks
             {
                 for (int i = 0; i < spaces.Length; i++) 
                 {

@@ -48,6 +48,7 @@
     <Compile Include="Entities\Inventory.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Items\ItemStack.cs" />
+    <Compile Include="Items\WeaponClass.cs" />
     <Compile Include="Map\MapTile.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Program.cs" />

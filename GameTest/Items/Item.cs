@@ -15,7 +15,12 @@ namespace GameTest
         public int stackSize;
         public CraftingRecipe recipe;
 
-        public Item(string id, string name, double weight, double value, int stackSize, CraftingRecipe recipe)
+        public Item()
+        {
+
+        }
+
+        public Item(string id, string name, double weight, double value, int stackSize, CraftingRecipe recipe) : this()
         {
             this.id = id;
             this.name = name;
